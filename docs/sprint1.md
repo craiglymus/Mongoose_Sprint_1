@@ -63,13 +63,15 @@ We've already provided a `models/index.js` for you to use.  If you take a look i
 `index.js` will import each model and export an object called `exports` with keys representing each of our models.  That way we can `require` the entire directory and get all of our models!  
 
 1. Go ahead and import and export your `Book` model in `index.js`.
+  
   ```js
   // models/index.js
   module.exports.Book = require("./book.js");
   ```
+  
   Now if someone were to `require('./models')` they'd gain access to this database model.
 
-    <details><summary>Here's a module example:</summary>
+<details><summary>Here's a module example:</summary>
 
 
       ├── models
@@ -92,7 +94,7 @@ We've already provided a `models/index.js` for you to use.  If you take a look i
       In the end this means that when you require `./models` in `server.js` you get back an object like
         { Gargoyle: Model, Goblin: Model, Gnome: Model }
 
-    </details>
+</details>
 
 
 ## 5. Verifying that this is working
@@ -106,7 +108,8 @@ Take a quick look in `seed.js`.  You should see that it does a `require('./model
   If you're not seeing `created X books` then something might be going wrong.  
 
   <details><summary>Spoiler: book.js</summary>
-  ```js
+  
+  ```javascript
   var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
